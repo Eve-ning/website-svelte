@@ -2,6 +2,7 @@
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
 	import type { Post } from '$lib/utils/sanity';
+	import { base } from '$app/paths';
 
 	export let post: Post;
 </script>
@@ -10,7 +11,7 @@
 	{#if post.mainImage}
 		<img
 			class="card__cover"
-			src={urlFor(post.mainImage).width(500).height(300).url()}
+			src="{base}/{urlFor(post.mainImage).width(500).height(300).url()}"
 			alt="Cover image for {post.title}"
 		/>
 	{:else}
@@ -19,7 +20,7 @@
 
 	<div class="card__container">
 		<h3 class="card__title">
-			<a class="card__link" href={`/post/${post.slug.current}`}>
+			<a class="card__link" href={`${base}/post/${post.slug.current}`}>
 				{post.title}
 			</a>
 		</h3>

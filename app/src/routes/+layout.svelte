@@ -1,26 +1,39 @@
-<div class="container">
-	<header class="header">
-		<a class="header__title" href="/">SvelteKit + Sanity</a>
-	</header>
-	<main>
-		<slot />
-	</main>
-	<footer class="footer">
-		<p class="footer__text">
-			Made with <svg
-				data-sanity-icon="heart-filled"
-				width="1em"
-				height="1em"
-				viewBox="0 0 25 25"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-				><path
-					d="M17 16C15.8 17.3235 12.5 20.5 12.5 20.5C12.5 20.5 9.2 17.3235 8 16C5.2 12.9118 4.5 11.7059 4.5 9.5C4.5 7.29412 6.1 5.5 8.5 5.5C10.5 5.5 11.7 6.82353 12.5 8.14706C13.3 6.82353 14.5 5.5 16.5 5.5C18.9 5.5 20.5 7.29412 20.5 9.5C20.5 11.7059 19.8 12.9118 17 16Z"
-					fill="currentColor"
-					stroke="currentColor"
-					stroke-width="1.2"
-				/></svg
-			> at Sanity
-		</p>
-	</footer>
+<script lang="ts">
+    import {base} from '$app/paths';
+    import '../app.css';
+</script>
+
+<div class="container max-w-full p-0 m-0 dark:bg-stone-950">
+
+
+    <nav class="flex justify-between px-5 py-5 rounded-full
+                shadow-md gap-3">
+        <!-- Signature -->
+        <a href="{base}/">
+            <img
+                    alt="Logo"
+                    class="rounded-full border
+                           border-teal-700
+                           p-1 shadow-md"
+                    src="/signature.png"
+                    width="42"
+            />
+        </a>
+        <p class="my-auto text-xl drop-shadow-md">
+            <span class="text-teal-800 dark:text-teal-300">good</span>
+            <span class="text-amber-800 dark:text-amber-300">Evening</span>
+        </p>
+        <!--        <div class="">-->
+        <!--            <div>-->
+        <!--                <Icon class="rounded-full p-1" size="42" solid src={Home}/>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </nav>
+    <main>
+        <slot/>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Built with SvelteKit + Sanity</p>
+    </footer>
 </div>

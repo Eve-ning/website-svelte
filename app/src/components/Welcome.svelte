@@ -1,9 +1,13 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <div class="welcome__container">
 	<div class="logos">
 		<div class="logos__blur" />
-		<img class="logos__entry" src="/svelte.svg" alt="Svelte Logo" />
+		<img class="logos__entry" src="{base}/svelte.svg" alt="Svelte Logo" />
 		<span class="logos__plus">+</span>
-		<img class="logos__entry" src="/sanity.svg" alt="Sanity Logo" />
+		<img class="logos__entry" src="{base}/sanity.svg" alt="Sanity Logo" />
 	</div>
 	<div class="steps">
 		<h2 class="steps__title">Next steps</h2>

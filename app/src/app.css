@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/lora.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/rubik.ttf');
+}
+
+@font-face {
+    font-family: 'Fira';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/fira.ttf');
+}
+
+
+* {
+    font-family: 'Fira', 'Lora', serif;
+}
