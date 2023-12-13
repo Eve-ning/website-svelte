@@ -1,32 +1,23 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
-	import { urlFor } from '$lib/utils/image';
-	import type { Post } from '$lib/utils/sanity';
-	import { base } from '$app/paths';
+    import {formatDate} from '$lib/utils';
+    import {urlFor} from '$lib/utils/image';
+    import type {Post} from '$lib/utils/sanity';
+    import {base} from '$app/paths';
 
-	export let post: Post;
+    export let post: Post;
 </script>
 
 <div class="card">
-	{#if post.mainImage}
-		<img
-			class="card__cover"
-			src="{base}/{urlFor(post.mainImage).width(500).height(300).url()}"
-			alt="Cover image for {post.title}"
-		/>
-	{:else}
-		<div class="card__cover--none" />
-	{/if}
-
-	<div class="card__container">
-		<h3 class="card__title">
-			<a class="card__link" href={`${base}/post/${post.slug.current}`}>
-				{post.title}
-			</a>
-		</h3>
-		<p class="card__excerpt">{post.excerpt}</p>
-		<p class="card__date">
-			{formatDate(post._createdAt)}
-		</p>
-	</div>
+    <div class="
+    card transition duration-200
+    border-accent border-l
+    bg-base-100
+    hover:bg-base-300
+    ">
+        <a class="card-body" href={`${base}/post/${post.slug.current}`}>
+            <h2 class="card-title">{post.title}</h2>
+            <p>{post.excerpt}</p>
+            <div class="">{formatDate(post._createdAt)}</div>
+        </a>
+    </div>
 </div>

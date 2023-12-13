@@ -7,24 +7,13 @@
 	export let data: PageData;
 </script>
 
-<section class="post">
-	{#if data.mainImage}
-		<img
-			class="post__cover"
-			src={urlFor(data.mainImage).url()}
-			alt="Cover image for {data.title}"
-		/>
-	{:else}
-		<div class="post__cover--none" />
-	{/if}
-	<div class="post__container">
-		<h1 class="post__title">{data.title}</h1>
-		<p class="post__excerpt">{data.excerpt}</p>
-		<p class="post__date">
-			{formatDate(data._createdAt)}
-		</p>
-		<div class="post__content">
-			<PortableText value={data.body} />
-		</div>
-	</div>
+<section class="post prose max-w-md mx-auto grid gap-2 my-6">
+    <h1 class="">{data.title}</h1>
+    <h3 class="">{data.excerpt}</h3>
+    <p >
+        {formatDate(data._createdAt)}
+    </p>
+    <div>
+        <PortableText value={data.body}/>
+    </div>
 </section>
