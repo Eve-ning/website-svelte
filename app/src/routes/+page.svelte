@@ -7,10 +7,10 @@
 	export let data: PageData;
 </script>
 
-<section class="max-w-md mx-auto grid gap-3 my-6">
+<section class="max-w-screen-sm mx-auto grid gap-4 py-20">
 	{#if data.posts.length}
 		{#each data.posts as post, ix}
-			<Card {post} />
+			<Card {post} cardNumber={ix} />
 			{#if ix === 0}
 				<div class="divider divider-accent">LATEST</div>
 			{/if}

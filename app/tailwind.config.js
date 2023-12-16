@@ -9,11 +9,11 @@ export default {
     daisyui: {
         themes: [{
             golda: {
-                "primary": "#8b2c9d",
-                "secondary": "#2e1a34",
+                "primary": "#e148ff",
+                "secondary": "#4b4b4b",
                 "accent": "#31ffd9",
-                "neutral": "#414857",
-                "base-100": "#1f2937",
+                "neutral": "#525252",
+                "base-100": "#1e1e1e",
                 "info": "#00dcff",
                 "success": "#bef264",
                 "warning": "#facc15",

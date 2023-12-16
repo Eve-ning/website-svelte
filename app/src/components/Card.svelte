@@ -5,19 +5,24 @@
     import {base} from '$app/paths';
 
     export let post: Post;
+    export let cardNumber: number = 0;
 </script>
 
-<div class="card">
-    <div class="
+<div class="flex">
+    <div class="text-3xl mr-2 font-extrabold text-secondary">
+        {cardNumber}.
+    </div>
+
+    <div class="card flex-1">
+        <div class="
     card transition duration-200
-    border-accent border-l
-    bg-base-100
     hover:bg-base-300
     ">
-        <a class="card-body" href={`${base}/post/${post.slug.current}`}>
-            <h2 class="card-title">{post.title}</h2>
-            <p>{post.excerpt}</p>
-            <div class="">{formatDate(post._createdAt)}</div>
-        </a>
+            <a class="card-body" href={`${base}/post/${post.slug.current}`}>
+                <p class="card-title">{post.title}</p>
+                <p>{post.excerpt}</p>
+                <p>{formatDate(post._createdAt)}</p>
+            </a>
+        </div>
     </div>
 </div>

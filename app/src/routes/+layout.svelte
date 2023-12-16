@@ -5,7 +5,8 @@
 
 <div class="container max-w-full p-0 m-0 dark:bg-stone-950">
     <nav class="navbar bg-base-100 border-primary border-b">
-        <div class="flex-1">
+        <div class=" mx-auto">
+        <div class="flex-none">
             <a href="{base}/">
                 <img
                         alt="Logo"
@@ -21,12 +22,12 @@
             <ul class="menu menu-horizontal">
                 <li><a href="{base}/">Home</a></li>
             </ul>
-        </div>
+        </div></div>
     </nav>
     <main>
         <slot/>
     </main>
-    <footer class="footer items-center p-4 bg-neutral border-t border-primary">
+    <footer class="footer items-center p-4 bg-base-100 border-t border-primary">
         <aside class="items-center grid-flow-col">
             <p>
                 Built with
