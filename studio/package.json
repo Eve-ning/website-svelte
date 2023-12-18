@@ -22,7 +22,6 @@
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "sanity": "^3.8.1",
-    "sanity-plugin-markdown": "^4.1.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
@@ -32,6 +31,7 @@
     "@types/styled-components": "^5.1.28",
     "eslint": "^8.50.0",
     "prettier": "^2.8.8",
+    "sanity-plugin-markdown": "^4.1.0",
     "typescript": "^5.2.2"
   },
   "prettier": {
