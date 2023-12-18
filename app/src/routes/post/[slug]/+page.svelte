@@ -1,9 +1,7 @@
 <script lang="ts">
-    import {PortableText} from '@portabletext/svelte';
     import {formatDate} from '$lib/utils';
-    import {urlFor} from '$lib/utils/image';
     import type {PageData} from './$types';
-    import { marked } from 'marked';
+    import {marked} from 'marked';
 
     export let data: PageData;
 </script>
@@ -13,5 +11,5 @@
     <h3>{data.excerpt}</h3>
     <p class="">{formatDate(data._createdAt)}</p>
     <div class="divider"></div>
-    <div class="prose">{@html marked(data.body)}</div>
+    <div class="prose">{@html marked.parse(data.body)}</div>
 </section>

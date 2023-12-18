@@ -1,6 +1,5 @@
 <script lang="ts">
     import {formatDate} from '$lib/utils';
-    import {urlFor} from '$lib/utils/image';
     import type {Post} from '$lib/utils/sanity';
     import {base} from '$app/paths';
 
@@ -14,10 +13,7 @@
     </div>
 
     <div class="card flex-1">
-        <div class="
-    card transition duration-200
-    hover:bg-base-300
-    ">
+        <div class="card transition duration-200 hover:bg-base-300">
             <a class="card-body" href={`${base}/post/${post.slug.current}`}>
                 <p class="card-title">{post.title}</p>
                 <p>{post.excerpt}</p>
