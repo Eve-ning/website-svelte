@@ -14,7 +14,9 @@
 	"dependencies": {
 		"@sanity/client": "^6.0.0",
 		"@sanity/image-url": "^1.0.2",
-		"groq": "^3.8.1"
+		"chart.js": "^4.4.1",
+		"groq": "^3.8.1",
+		"marked-katex-extension": "^4.0.5"
 	},
 	"devDependencies": {
 		"@portabletext/svelte": "^2.1.3",
