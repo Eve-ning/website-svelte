@@ -12,16 +12,17 @@
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
   <title>Hello World!</title>
   
-		<link href="./_app/immutable/assets/app.78d876c8.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.fd0a3a78.js">
+		<link href="./_app/immutable/assets/app.e40778e2.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.2ab14f0a.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.a2982970.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.c8104ef9.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.af6c12a5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.eeee4a41.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.40ca21e2.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.51c5fb16.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.8383c1fe.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.37519fd8.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/3.1a0900e5.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.322e5dde.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.ed3de573.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Hero.7d45d1e7.js">
 </head>
 <body class="p-0 m-0" data-sveltekit-preload-data="hover">
 <div style="">
@@ -30,9 +31,12 @@
 <div class="container max-w-full p-0 m-0 dark:bg-stone-950"><nav class="navbar bg-base-100 border-primary border-b"><div class="mx-auto"><div class="flex-none"><a href="/sanity-web/"><img alt="Logo" class="rounded-full border border-accent p-1 shadow-md" src="/sanity-web/signature.png" width="42"></a></div>
     <div class="flex-none"><ul class="menu menu-horizontal"><li><a href="/sanity-web/">Home</a></li>
         <li><a href="/sanity-web/gallery">Gallery</a></li></ul></div></div></nav>
-  <main><section class="max-w-screen-lg mx-auto py-20"><div class="rounded-full border shadow p-3 m-3 text-center"><p>Click on any Image to expand it :)</p>
-  <p>Images are scaled to 1280x720</p></div>
-<div class="grid lg:grid-cols-4 md:grid-cols-1 gap-10"><div class="card bg-base-100 shadow-xl"><figure><img src="/sanity-web/bg/cat (1).jpg" alt="kurogane" class="filter contrast-75 hover:contrast-100 transition duration-300" onclick="this.requestFullscreen()"></figure>
+  <main><section><div><div class="hero min-h-screen bg-base-200"><div class="hero-content text-center"><div class="max-w-md"><h1 class="text-5xl font-bold">Gallery</h1>
+      <div class="py-6"><ul class="list-none" slot="pre"><li>Images are all scaled to <span class="font-bold">1280 x 720</span></li>
+        <li>Click on images for <span class="font-bold">fullscreen</span></li></ul></div>
+      <div class="divider"></div>
+      <p class="py-6 text-lg" slot="post">⬇️ Scroll Down for images ⬇️</p></div></div></div></div>
+  <div class="max-w-screen-2xl mx-auto m-10"><div class="grid lg:grid-cols-4 md:grid-cols-1 gap-10"><div class="card bg-base-100 shadow-xl"><figure><img src="/sanity-web/bg/cat (1).jpg" alt="kurogane" class="filter contrast-75 hover:contrast-100 transition duration-300" onclick="this.requestFullscreen()"></figure>
       <div class="card-body"><h2 class="card-title">My Cat, Mao Mao</h2>
         </div>
     </div><div class="card bg-base-100 shadow-xl"><figure><img src="/sanity-web/bg/cat (2).jpg" alt="kurogane" class="filter contrast-75 hover:contrast-100 transition duration-300" onclick="this.requestFullscreen()"></figure>
@@ -80,7 +84,7 @@
     </div><div class="card bg-base-100 shadow-xl"><figure><img src="/sanity-web/bg/wheelock.jpg" alt="kurogane" class="filter contrast-75 hover:contrast-100 transition duration-300" onclick="this.requestFullscreen()"></figure>
       <div class="card-body"><h2 class="card-title">Singapore, The Star Vista</h2>
         </div>
-    </div></div></section></main>
+    </div></div></div></section></main>
   <footer class="footer items-center p-4 bg-base-100 border-t border-primary"><aside class="items-center grid-flow-col"><p>Built with
       <a class="text-orange-600 hover:text-slate-500" href="https://kit.svelte.dev/">SvelteKit</a> &amp;
       <a class="text-red-400 hover:text-slate-500" href="https://www.sanity.io/">Sanity</a> &amp;
@@ -92,7 +96,7 @@
 			
 			<script>
 				{
-					__sveltekit_1iaj8vo = {
+					__sveltekit_1q3t2vp = {
 						assets: "/sanity-web",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {"PUBLIC_SANITY_PROJECT_ID":"fhctom75","PUBLIC_SANITY_DATASET":"production"}
@@ -103,8 +107,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.fd0a3a78.js"),
-						import("./_app/immutable/entry/app.51c5fb16.js")
+						import("./_app/immutable/entry/start.2ab14f0a.js"),
+						import("./_app/immutable/entry/app.8383c1fe.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],

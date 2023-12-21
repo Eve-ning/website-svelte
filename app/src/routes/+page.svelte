@@ -1,18 +1,17 @@
 <script lang="ts">
-  import Card from '../components/Card.svelte'
   import type {PageData} from './$types'
   import '../app.css'
+  import Home from '../components/Home.svelte'
+  import Hero from '../components/Hero.svelte'
 
   export let data: PageData
 </script>
 
-<section class="max-w-screen-sm mx-auto grid gap-4 py-20">
-  {#if data.posts.length}
-    {#each data.posts as post, ix}
-      <Card {post} cardNumber={ix} />
-      {#if ix === 0}
-        <div class="divider divider-accent">LATEST</div>
-      {/if}
-    {/each}
-  {/if}
+<section class="grid gap-4">
+  <Hero title="Good Evening" half="{true}">
+    <div slot="post">☄️</div>
+  </Hero>
+  <div class="max-w-screen-md mx-auto py-10">
+  <Home posts="{data.posts}"/>
+  </div>
 </section>

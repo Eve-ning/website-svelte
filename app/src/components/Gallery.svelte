@@ -27,10 +27,6 @@
   ]
 </script>
 
-<div class="rounded-full border shadow p-3 m-3 text-center">
-  <p>Click on any Image to expand it :)</p>
-  <p>Images are scaled to 1280x720</p>
-</div>
 <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-10">
   {#each imMeta as {path, title, desc}}
     <div class="card bg-base-100 shadow-xl">
