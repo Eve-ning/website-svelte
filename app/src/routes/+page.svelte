@@ -8,10 +8,10 @@
 </script>
 
 <section class="grid gap-4">
-  <Hero title="Good Evening" half="{true}">
+  <Hero title="Good Evening">
     <div slot="post">☄️</div>
   </Hero>
   <div class="max-w-screen-md mx-auto py-10">
-  <Home posts="{data.posts}"/>
+    <Home posts="{data.posts}" />
   </div>
 </section>

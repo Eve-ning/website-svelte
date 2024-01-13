@@ -1,9 +1,9 @@
 <script lang="ts">
-    import {formatDate} from '$lib/utils'
-    import type {Post} from '$lib/utils/sanity'
-    import {base} from '$app/paths'
+  import {formatDate} from '$lib/utils'
+  import type {Post} from '$lib/utils/sanity'
+  import {base} from '$app/paths'
 
-    export let post: Post
+  export let post: Post
   export let cardNumber: number = 0
 </script>
 

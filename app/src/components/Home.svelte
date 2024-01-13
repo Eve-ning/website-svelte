@@ -3,7 +3,7 @@
   import '../app.css'
   import type {Post} from '$lib/utils/sanity'
 
-  export let posts: Post[];
+  export let posts: Post[]
 </script>
 {#each posts as post, ix}
   <Card {post} cardNumber={posts.length - ix - 2} />
