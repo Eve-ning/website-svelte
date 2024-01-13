@@ -18,6 +18,9 @@ jobs:
 
       - name: Install and Build 🔧
         working-directory: ./app
+        env:
+          PUBLIC_SANITY_DATASET: ${{ secrets.PUBLIC_SANITY_DATASET }}
+          PUBLIC_SANITY_PROJECT_ID: ${{ secrets.PUBLIC_SANITY_PROJECT_ID }}
         run: |
           npm ci
           npm run build
