@@ -19,7 +19,7 @@ const config = {
       // strict: true
     }),
     paths: {
-      base: process.env.NODE_ENV === 'production' ? '/sanity-web/tree/gh-pages' : ''
+      base: process.env.NODE_ENV === 'production' ? '/sanity-web' : ''
     }
   }
 }
