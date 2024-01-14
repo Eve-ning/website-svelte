@@ -11,7 +11,7 @@
         <div class="py-6">
           <slot name="pre" />
         </div>
-        <div class="divider"/>  
+        <div class="divider" />
         <slot name="post" />
       </div>
     </div>

@@ -18,6 +18,7 @@
     <div class="flex-none">
       <ul class="menu menu-horizontal">
         <li><a href="{base}/">home</a></li>
+        <li><a href="{base}/about">about</a></li>
         <li><a href="{base}/gallery">gallery</a></li>
       </ul>
     </div>
