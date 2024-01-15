@@ -5,8 +5,9 @@
 
 <li>
   <hr class="bg-primary" />
-  <div class="timeline-start">{date}
-    <span class="text-lg font-bold">{title}</span>
+  <div class="timeline-start">
+    <span class="badge badge-info italic">{date}</span>
+    <span class="text-lg font-bold bad">{title}</span>
   </div>
   <div class="timeline-middle">
     <svg class="w-3 h-3"
@@ -17,9 +18,8 @@
       />
     </svg>
   </div>
-  <div class="timeline-end timeline-box">
-
+  <article class="timeline-end timeline-box prose">
     <slot />
-  </div>
+  </article>
   <hr class="bg-primary" />
 </li>
