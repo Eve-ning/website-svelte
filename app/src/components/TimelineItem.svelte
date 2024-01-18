@@ -1,11 +1,12 @@
 <script lang="ts">
   export let date: string
   export let title = ''
+  export let summary: string
 </script>
 
 <li>
   <hr class="bg-primary" />
-  <div class="timeline-start">
+  <div class="timeline-start md:text-end md:px-5">
     <span class="badge badge-info italic">{date}</span>
     <span class="text-lg font-bold bad">{title}</span>
   </div>
@@ -18,8 +19,16 @@
       />
     </svg>
   </div>
-  <article class="timeline-end timeline-box prose">
-    <slot />
+  <article class="timeline-end collapse collapse-plus prose" tabindex="-1">
+    <input class="peer" type="checkbox" />
+    <div class=
+           "collapse-title text-xl
+           peer-checked:text-primary">
+      {summary}
+    </div>
+    <div class="collapse-content">
+      <slot />
+    </div>
   </article>
   <hr class="bg-primary" />
 </li>
