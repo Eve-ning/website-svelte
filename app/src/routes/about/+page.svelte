@@ -3,6 +3,7 @@
   import '../../app.css'
   import TimelineItem from '../../components/TimelineItem.svelte'
   import type {PageData} from './$types'
+  import {marked} from 'marked'
 
   export let data: PageData
 
@@ -30,27 +31,11 @@
               {/each}
           {/if}
           {#if body}
-            <p>
-              {body}
-            </p>
+            <div>{@html marked.parse(body)}</div>
           {/if}
         </TimelineItem>
       {/each}
-      <!--      <TimelineItem date="2019" title="KNIME">-->
-      <!--        <p>-->
-      <!--          To be honest, coding in raw <b>Python</b> and <b>R Lang</b> was getting quite annoying.-->
-      <!--          Simpler, common data engineering, analytics and machine learning could've been easier with-->
-      <!--          a GUI. That's why I tried <b>KNIME</b>, which is a GUI-oriented data-engineering platform.-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          Looking back, doing data stuff in no-code was wonderful. KNIME was a wonderful tool-->
-      <!--          to use, as I don't really need to prepare too much to do so little and achieve so much.-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          I created <a class="font-mono" href="https://github.com/Eve-ning/ppshift">ppshift</a>,-->
-      <!--          which is also another attempt at research.-->
-      <!--        </p>-->
-      <!--      </TimelineItem>-->
+
       <!--      <TimelineItem date="2019" title="R Lang, for the lazy Pythonistas">-->
       <!--        <p>-->
       <!--          At that time, <b>R Lang</b> and <b>Python</b> were head to head,-->
