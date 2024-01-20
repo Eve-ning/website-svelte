@@ -11,12 +11,12 @@ export default defineType({
       type: 'string'
     }),
     defineField({
-      name: 'date_from',
+      name: 'dateFrom',
       title: 'Date From',
       type: 'date'
     }),
     defineField({
-      name: 'date_to',
+      name: 'dateTo',
       title: 'Date To',
       type: 'date'
     }),

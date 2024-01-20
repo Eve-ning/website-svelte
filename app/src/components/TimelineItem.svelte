@@ -1,13 +1,25 @@
 <script lang="ts">
-  export let date: string
   export let title = ''
   export let summary: string
+  export let dateFrom: string
+  export let dateTo: string
+  
+  function formatDateRange(dateFrom: string, dateTo: string) {
+    let dateFromYear = dateFrom.substring(0, 4)
+    let dateToYear = dateTo.substring(0, 4)
+    if (dateFromYear === dateToYear) {
+      return dateFromYear
+    }
+    return `${dateFromYear} ~ ${dateToYear}`
+  }
+
 </script>
 
 <li>
   <hr class="bg-primary" />
   <div class="timeline-start md:text-end md:px-5">
-    <span class="badge badge-info italic">{date}</span>
+    🗓
+    <span class="badge badge-info italic">{formatDateRange(dateFrom, dateTo)}</span>
     <span class="text-lg font-bold bad">{title}</span>
   </div>
   <div class="timeline-middle">

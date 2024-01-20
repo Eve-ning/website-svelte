@@ -37,7 +37,7 @@ export async function getPost(slug: string): Promise<Post> {
 
 export async function getExpPosts(): Promise<ExpPost[]> {
   return await client.fetch(
-    groq`*[_type == "expPost"] | order(date_from desc)`
+    groq`*[_type == "expPost"] | order(dateTo desc)`
   )
 }
 
@@ -63,8 +63,8 @@ export interface ExpPost {
   _type: 'expPost';
   _createdAt: string;
   title: string;
-  date_from: string;
-  date_to: string;
+  dateFrom: string;
+  dateTo: string;
   links: string[];
   summary: string;
   body: PortableTextBlock[];

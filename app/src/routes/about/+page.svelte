@@ -22,79 +22,21 @@
   </div>
   <div class="max-w-screen-2xl mx-auto p-10 ">
     <ul class="timeline timeline-vertical max-md:timeline-compact">
-      {#each data.posts as {title, summary, links, date_from, date_to, body}}
+      {#each data.posts as {title, summary, links, dateFrom, dateTo, body}}
 
-        <TimelineItem date="2019 ~ 2023" title={title} summary={summary}>
+        <TimelineItem {title} {summary} {dateFrom} {dateTo}>
           {#if links}
+            <ul>
               {#each links as url}
-                <a href={url} class="font-mono underline text-xs">{url}</a>
+                <li><a href={url} class="font-mono underline text-xs">{url}</a></li>
               {/each}
+            </ul>
           {/if}
           {#if body}
-            <div>{@html marked.parse(body)}</div>
+            <div>{@html marked(body)}</div>
           {/if}
         </TimelineItem>
       {/each}
-
-      <!--      <TimelineItem date="2019" title="R Lang, for the lazy Pythonistas">-->
-      <!--        <p>-->
-      <!--          At that time, <b>R Lang</b> and <b>Python</b> were head to head,-->
-      <!--          challenging each other to rule the world of Data Science.-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          Both then, (and also now), are extremely accessible options for-->
-      <!--          beginners, and prove to be great investments of time, as they-->
-      <!--          are versatile languages for many data engineering use cases.-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          My curious mind wanted to know what's the haps, thus created-->
-      <!--          <a class="font-mono" href="https://github.com/Eve-ning/vsrgtools">vsrgtools</a>,-->
-      <!--          a simple R Lang library that deals with I/O & data analytics for-->
-      <!--          osu!mania maps. Also, I used RShiny to create a sample GUI in-->
-      <!--          <a class="font-mono" href="https://github.com/Eve-ning/vsrgtools_ui">vsrgtools_ui</a>-->
-      <!--          that was previously hosted on <b>Django</b>... <i>before the free tier was no more</i>-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          After giving it a try for a while, I can definitely see how accessible it is,-->
-      <!--          however, the only edge it had over Python was the ease of plotting complicated-->
-      <!--          graphs through the marvelous <span class="font-mono">ggplot2</span>.-->
-      <!--          It's just not enough to keep me in R, especially when R consistently underperforms-->
-      <!--          Python in performance for ML, larger datasets, and honestly, its editor support-->
-      <!--          is subpar.-->
-      <!--        </p>-->
-      <!--      </TimelineItem>-->
-      <!--      <TimelineItem date="2019" title="My first ML Research Paper try">-->
-      <!--        <p>-->
-      <!--          Following my passion for-->
-      <!--          <Tip hover="Vertical Scrolling Rhythm Games">VSRGs</Tip>-->
-      <!--          ,-->
-      <!--          I wanted to get one foot into ML by solving one of the most complicated problems that my-->
-      <!--          genre of games always had: Predicting Difficulty of a Level.-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          I won't go too deep into why it's difficult, but in retrospect,-->
-      <!--          it's a combination of-->
-      <!--          <Tip hover="Machine Learning">ML</Tip>-->
-      <!--          skillsets from-->
-      <!--          <Tip hover="Natural Language Processing">NLP</Tip>-->
-      <!--          ,-->
-      <!--          <Tip hover="Computer Vision">CV</Tip>-->
-      <!--          ,-->
-      <!--          Collaborative Filtering, and, to bring it all together, Software Engineering.-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          You can take a look at the project-->
-      <!--          <a class="font-mono" href="https://github.com/Eve-ning/ppshift_ml">ppshift_ml</a>-->
-      <!--          and the-->
-      <!--          <a href="https://github.com/Eve-ning/ppshift_ml/blob/master/research_tex/main.pdf">-->
-      <!--            mini mock research paper on the subject-->
-      <!--          </a>-->
-      <!--        </p>-->
-      <!--        <p>-->
-      <!--          It's no surprise that it's not the best approach,-->
-      <!--          however, it gave me a good idea on what ML research can entail.-->
-      <!--          This experience made me more confident in doing more.-->
-      <!--        </p>-->
 
       <!--      </TimelineItem>-->
       <!--      <TimelineItem date="2019" title="LaTeX for fancy documents">-->
