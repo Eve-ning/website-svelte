@@ -18,9 +18,10 @@
 		</Hero>
 	</div>
 	<div class="max-w-screen-2xl mx-auto p-10 ">
+		<div class="md:text-center font-extrabold text-5xl my-10 ">Projects</div>
 		<ul class="timeline timeline-vertical max-md:timeline-compact">
-			{#each data.posts as { title, summary, links, dateFrom, dateTo, body }}
-				<TimelineItem {title} {summary} {dateFrom} {dateTo}>
+			{#each data.posts as { title, summary, links, dateFrom, dateTo, tags, body }}
+				<TimelineItem {title} {summary} {dateFrom} {dateTo} {tags}>
 					{#if links}
 						<ul>
 							{#each links as url}

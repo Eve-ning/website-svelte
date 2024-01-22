@@ -8,17 +8,17 @@ export default defineType({
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'dateFrom',
       title: 'Date From',
-      type: 'date'
+      type: 'date',
     }),
     defineField({
       name: 'dateTo',
       title: 'Date To',
-      type: 'date'
+      type: 'date',
     }),
     defineField({
       name: 'links',
@@ -28,25 +28,34 @@ export default defineType({
         {
           name: 'link',
           title: 'Link',
-          type: 'url'
+          type: 'url',
         },
-      ]
+      ],
+    }),
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'tags',
+      options: {
+        includeFromRelated: 'tags',
+        allowCreate: true,
+      },
     }),
     defineField({
       name: 'summary',
       title: 'Summary',
       type: 'text',
-      rows: 4
+      rows: 4,
     }),
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'markdown'
-    })
+      type: 'markdown',
+    }),
   ],
   preview: {
     select: {
-      title: 'title'
-    }
-  }
+      title: 'title',
+    },
+  },
 })

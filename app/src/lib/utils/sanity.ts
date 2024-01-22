@@ -65,6 +65,7 @@ export interface ExpPost {
   title: string;
   dateFrom: string;
   dateTo: string;
+  tags: { label: string, value: string }[];
   links: string[];
   summary: string;
   body: PortableTextBlock[];
