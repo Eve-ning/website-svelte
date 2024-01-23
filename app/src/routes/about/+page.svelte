@@ -4,6 +4,8 @@
 	import TimelineItem from '../../components/TimelineItem.svelte';
 	import type { PageData } from './$types';
 	import { marked } from 'marked';
+	import Divider from '../../components/Divider.svelte';
+	import Body from '../../components/Body.svelte';
 
 	export let data: PageData;
 
@@ -12,13 +14,14 @@
 <section>
 	<div>
 		<Hero title="about">
-			<ul class="list-none" slot="pre">
+			<ul class="list-none" slot="post">
 				<li class="font-mono">hello world</li>
 			</ul>
 		</Hero>
 	</div>
-	<div class="max-w-screen-2xl mx-auto p-10 ">
-		<div class="md:text-center font-extrabold text-5xl my-10 ">Projects</div>
+	<Body>
+		<Divider>Project History</Divider>
+<!--		<div class="divider font-extrabold text-3xl my-10 p-3 uppercase">Project History</div>-->
 		<ul class="timeline timeline-vertical max-md:timeline-compact">
 			{#each data.posts as { title, summary, links, dateFrom, dateTo, tags, body }}
 				<TimelineItem {title} {summary} {dateFrom} {dateTo} {tags}>
@@ -34,7 +37,6 @@
 					{/if}
 				</TimelineItem>
 			{/each}
-
 		</ul>
-	</div>
+	</Body>
 </section>
