@@ -21,7 +21,7 @@
 	<hr class="bg-primary" />
 	<div class="timeline-start md:text-end px-4">
 		<div>
-			<div class="text-lg bad">{title}</div>
+			<div class="text-lg">{title}</div>
 			<div class="badge badge-info font-extrabold italic">{formatDateRange(dateFrom, dateTo)}</div>
 		</div>
 
@@ -36,14 +36,14 @@
 			/>
 		</svg>
 	</div>
-	<article class="timeline-end collapse collapse-plus prose" tabindex="-1">
+	<article class="
+		timeline-end collapse collapse-plus prose
+		hover:bg-base-100 hover:shadow transition duration-300 ease-in-out
+		" tabindex="-1">
 
 		<input class="peer" type="checkbox" />
-		<div class=
-					 "collapse-title
-           peer-checked:text-primary">
+		<div class="collapse-title peer-checked:text-primary">
 			{summary}
-
 			<div>
 				{#each tags as tag}
 					<span class="badge badge-neutral mx-0.5 italic">{tag.label}</span>

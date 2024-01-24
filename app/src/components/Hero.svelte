@@ -1,7 +1,5 @@
 <script lang="ts">
 	export let title: string;
-	// let size = half ? 'py-10' : 'min-h-0.5'
-	const is_post = $$slots.post;
 </script>
 <div
 	class="hero py-10  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-slate-900 via-purple-950 to-slate-900">
