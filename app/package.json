@@ -16,7 +16,8 @@
     "@sanity/image-url": "^1.0.2",
     "chart.js": "^4.4.1",
     "groq": "^3.8.1",
-    "marked-katex-extension": "^4.0.5"
+    "marked-katex-extension": "^4.0.5",
+    "mermaid": "^10.7.0"
   },
   "devDependencies": {
     "@portabletext/svelte": "^2.1.3",
