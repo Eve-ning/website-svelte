@@ -6,6 +6,21 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      initialValue: 'project',
+      options: {
+        list: [
+          {title: 'Project', value: 'project'},
+          {title: 'Skill', value: 'skill'},
+          {title: 'Career', value: 'career'},
+        ],
+        direction: 'horizontal',
+        layout: 'radio',
+      },
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
