@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {CustomMarkdownInput} from '../plugins/MarkdownInputCustomPreview'
 
 export default defineType({
   name: 'blogPost',
@@ -30,6 +31,7 @@ export default defineType({
       name: 'body',
       title: 'Body',
       type: 'markdown',
+      components: {input: CustomMarkdownInput},
     }),
   ],
   preview: {
