@@ -7,6 +7,10 @@
     import mermaid from 'mermaid';
     import {onMount} from "svelte";
 
+    mermaid.initialize({
+        theme: 'dark',
+        startOnLoad: false,
+    })
     export let data: PageData
     marked.use(markedKatex({displayMode: true, output: 'mathml'}))
     const renderer = new marked.Renderer();
@@ -18,10 +22,7 @@
         }
     };
     onMount(() => {
-        mermaid.initialize({
-            theme: 'dark',
-            startOnLoad: true,
-        })
+        mermaid.run();
     })
 </script>
 
