@@ -5,11 +5,8 @@
     import markedKatex from 'marked-katex-extension'
     import Hero from '../../../components/Hero.svelte'
     import mermaid from 'mermaid';
+    import {onMount} from "svelte";
 
-    mermaid.initialize({
-        theme: 'dark',
-        startOnLoad: true,
-    })
     export let data: PageData
     marked.use(markedKatex({displayMode: true, output: 'mathml'}))
     const renderer = new marked.Renderer();
@@ -20,7 +17,12 @@
             return '<pre class="bg-transparent"><code>' + code + '</code></pre>';
         }
     };
-
+    onMount(() => {
+        mermaid.initialize({
+            theme: 'dark',
+            startOnLoad: true,
+        })
+    })
 </script>
 
 <Hero title="{data.title ?? '-'}">
