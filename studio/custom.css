@@ -1,3 +1,8 @@
 div[class^="TagsInput-module_menu"] {
     z-index: 5 !important;
 }
+
+div[data-ui="Container"] {
+    margin: 0;
+    max-width: max-content;
+}
