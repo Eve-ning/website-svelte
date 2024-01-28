@@ -5,6 +5,7 @@ import {schemaTypes} from './schemas'
 import {markdownSchema} from 'sanity-plugin-markdown'
 import {tags} from 'sanity-plugin-tags'
 import './custom.css'
+
 export const projectId = process.env.SANITY_STUDIO_PROJECT_ID!
 export const dataset = process.env.SANITY_STUDIO_DATASET!
 

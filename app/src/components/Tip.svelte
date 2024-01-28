@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let hover: string;
+    export let hover: string;
 
 </script>
 <span class="tooltip underline font-bold"
