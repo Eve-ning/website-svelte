@@ -8,12 +8,13 @@
 
     mermaid.initialize({
         theme: 'dark',
+        startOnLoad: true,
     })
     export let data: PageData
     marked.use(markedKatex({displayMode: true, output: 'mathml'}))
     const renderer = new marked.Renderer();
     renderer.code = function (code, language) {
-        if (code.match(/^sequenceDiagram/) || code.match(/^graph/) || code.match(/^quadrantChart/)) {
+        if (code.match(/^sequenceDiagram/) || code.match(/^flowchart/) || code.match(/^quadrantChart/)) {
             return '<pre class="mermaid bg-transparent grid justify-items-center">' + code + '</pre>';
         } else {
             return '<pre class="bg-transparent"><code>' + code + '</code></pre>';
