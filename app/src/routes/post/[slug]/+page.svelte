@@ -26,7 +26,7 @@
     })
 </script>
 
-<Hero title="{data.title ?? '-'}">
+<Hero title="{data.title ?? ''}">
     <div slot="post">
         <h3>{data.excerpt}</h3>
         <p>{formatDate(data._createdAt)}</p>
