@@ -48,24 +48,10 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'tags',
-      title: 'Tags',
-      type: 'tags',
-      options: {
-        includeFromRelated: 'tags',
-        allowCreate: true,
-      },
-    }),
-    defineField({
       name: 'summary',
       title: 'Summary',
       type: 'text',
       rows: 4,
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'markdown',
     }),
   ],
   preview: {

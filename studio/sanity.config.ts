@@ -1,10 +1,10 @@
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
+import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemas'
-import {markdownSchema} from 'sanity-plugin-markdown'
-import {tags} from 'sanity-plugin-tags'
 import './custom.css'
+import {codeInput} from '@sanity/code-input'
+import {latexInput} from 'sanity-plugin-latex-input'
 
 export const projectId = process.env.SANITY_STUDIO_PROJECT_ID!
 export const dataset = process.env.SANITY_STUDIO_DATASET!
@@ -14,7 +14,7 @@ export default defineConfig({
   title: "Evening's Website",
   projectId,
   dataset,
-  plugins: [deskTool(), visionTool(), markdownSchema(), tags()],
+  plugins: [structureTool(), visionTool(), codeInput(), latexInput()],
   schema: {
     types: schemaTypes,
   },
